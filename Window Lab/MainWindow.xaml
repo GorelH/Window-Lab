@@ -1,0 +1,14 @@
+﻿<Window x:Class="Window_Lab.Home"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Home" Height="350" Width="525">
+    
+    <DockPanel>
+        
+        
+        
+        
+    </DockPanel>
+    
+    
+</Window>
