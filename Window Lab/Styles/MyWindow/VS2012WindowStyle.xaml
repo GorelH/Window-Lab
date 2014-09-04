@@ -8,18 +8,22 @@
     <SolidColorBrush x:Key="VS2012WindowBorderBrush" Color="#007ACC" />
     <SolidColorBrush x:Key="VS2012WindowBorderBrushInactive" Color="#999999" />
     <SolidColorBrush x:Key="VS2012WindowStatusForeground" Color="#FFFFFF" />
-    <SolidColorBrush x:Key="VS2012WindowStatusForegroundInactive" Color="#FFFFFF" />-->
-
-    <SolidColorBrush x:Key="TitleBarBackgroundBrush" Color="#007ACC" />
-    <SolidColorBrush x:Key="VS2012WindowBorderBrush" Color="#007ACC" />
-    <SolidColorBrush x:Key="VS2012WindowBorderBrushInactive" Color="#999999" />
-    <SolidColorBrush x:Key="VS2012WindowStatusForeground" Color="#FFFFFF" />
     <SolidColorBrush x:Key="VS2012WindowStatusForegroundInactive" Color="#FFFFFF" />
+    <SolidColorBrush x:Key="VS2012WindowBackGroundColor" Color="#EFEFF2" />
+    -->
+
+   
+    <SolidColorBrush x:Key="TitleBarBackgroundBrush" Color="White" />
+    <SolidColorBrush x:Key="WindowBorderBrush" Color="#007ACC" />
+    <SolidColorBrush x:Key="WindowBorderBrushInactive" Color="#999999" />
+    <SolidColorBrush x:Key="WindowStatusForeground" Color="#FFFFFF" />
+    <SolidColorBrush x:Key="WindowStatusForegroundInactive" Color="#FFFFFF" />
+    <SolidColorBrush x:Key="WindowBackGroundColor" Color="White" />
 
 
     <!-- Cool comment -->
 
-    <Style x:Key="VS2012WindowStyleTitleBarButton" TargetType="{x:Type Button}">
+    <Style x:Key="WindowStyleTitleBarButton" TargetType="{x:Type Button}">
         <Setter Property="Focusable" Value="false" />
         <Setter Property="Template">
             <Setter.Value>
@@ -38,7 +42,7 @@
                             <Setter TargetName="PART_border" Property="Opacity" Value="0.7" />
                         </Trigger>
                         <Trigger Property="IsPressed" Value="True">
-                            <Setter TargetName="PART_border" Property="Background" Value="{StaticResource VS2012WindowBorderBrush}"/>
+                            <Setter TargetName="PART_border" Property="Background" Value="{StaticResource WindowBorderBrush}"/>
                             <Setter TargetName="PART_border" Property="Opacity" Value="1" />
                             <Setter Property="Foreground" Value="#FFF"/>
                         </Trigger>
@@ -70,9 +74,8 @@
                             x:Name="PART_Border"
                             Width="Auto"
                             Height="Auto"
-                            
-                            Background="White"
-                            BorderBrush="{StaticResource VS2012WindowBorderBrush}"
+                            Background="{StaticResource WindowBackGroundColor}"
+                            BorderBrush="{StaticResource WindowBorderBrush}"
                             BorderThickness="1"
                             Padding="0">
                             <Border.Effect>
@@ -112,6 +115,7 @@
                                             Margin="4,-7,0,7"
                                             Width="32"
                                             Height="32"
+                                            Visibility="Hidden"
                                             MouseLeftButtonDown="IconMouseLeftButtonDown"
                                             />
                                         <TextBlock
@@ -131,7 +135,7 @@
                                             VerticalAlignment="Top"
                                             Width="34"
                                             Height="26"
-                                            Style="{StaticResource VS2012WindowStyleTitleBarButton}"
+                                            Style="{StaticResource WindowStyleTitleBarButton}"
                                             Click="MinButtonClick"
                                             >
                                             <Grid MaxHeight="9" MaxWidth="9">
@@ -150,7 +154,7 @@
                                             VerticalAlignment="Top"
                                             Width="34"
                                             Height="26"
-                                            Style="{StaticResource VS2012WindowStyleTitleBarButton}"
+                                            Style="{StaticResource WindowStyleTitleBarButton}"
                                             Click="MaxButtonClick"
                                             >
                                             <Grid MaxHeight="9" MaxWidth="9">
@@ -170,7 +174,7 @@
                                             VerticalAlignment="Top"
                                             Width="34"
                                             Height="26"
-                                            Style="{StaticResource VS2012WindowStyleTitleBarButton}"
+                                            Style="{StaticResource WindowStyleTitleBarButton}"
                                             Click="CloseButtonClick"
                                             >
                                             <Grid MaxHeight="9" MaxWidth="9">
@@ -231,7 +235,7 @@
                             <Setter TargetName="PART_MaxButton_Path" Property="Data" Value="M0,3 H5 V8 H0 V3 M0,4 H5 M3,0 H8 V5 H7 M3,1 H8"/>
                         </Trigger>
                         <Trigger Property="IsActive" Value="False">
-                            <Setter TargetName="PART_Border" Property="BorderBrush" Value="{StaticResource VS2012WindowBorderBrushInactive}"/>
+                            <Setter TargetName="PART_Border" Property="BorderBrush" Value="{StaticResource WindowBorderBrushInactive}"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -241,12 +245,12 @@
             <Style TargetType="{x:Type StatusBar}">
                 <Style.Triggers>
                     <DataTrigger Binding="{Binding IsActive, RelativeSource={RelativeSource AncestorType=Window}}" Value="True">
-                        <Setter Property="Foreground" Value="{StaticResource VS2012WindowStatusForeground}" />
-                        <Setter Property="Background" Value="{StaticResource VS2012WindowBorderBrush}" />
+                        <Setter Property="Foreground" Value="{StaticResource WindowStatusForeground}" />
+                        <Setter Property="Background" Value="{StaticResource WindowBorderBrush}" />
                     </DataTrigger>
                     <DataTrigger Binding="{Binding IsActive, RelativeSource={RelativeSource AncestorType=Window}}" Value="False">
-                        <Setter Property="Foreground" Value="{StaticResource VS2012WindowStatusForegroundInactive}" />
-                        <Setter Property="Background" Value="{StaticResource VS2012WindowBorderBrushInactive}" />
+                        <Setter Property="Foreground" Value="{StaticResource WindowStatusForegroundInactive}" />
+                        <Setter Property="Background" Value="{StaticResource WindowBorderBrushInactive}" />
                     </DataTrigger>
                 </Style.Triggers>
             </Style>
