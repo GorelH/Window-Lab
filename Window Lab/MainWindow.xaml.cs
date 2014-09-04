@@ -18,9 +18,9 @@ namespace Window_Lab
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class Home : Window
+    public partial class MainWindow : Window
     {
-        public Home()
+        public MainWindow()
         {
             InitializeComponent();
         }
