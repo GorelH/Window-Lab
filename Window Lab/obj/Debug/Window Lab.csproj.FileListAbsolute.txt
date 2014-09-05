@@ -14,3 +14,4 @@ C:\Users\Halid\Documents\Visual Studio 2013\Projects\Window Lab\Window Lab\obj\D
 C:\Users\Halid\Documents\Visual Studio 2013\Projects\Window Lab\Window Lab\obj\Debug\Window Lab.exe
 C:\Users\Halid\Documents\Visual Studio 2013\Projects\Window Lab\Window Lab\obj\Debug\Window Lab.pdb
 C:\Users\Halid\Documents\Visual Studio 2013\Projects\Window Lab\Window Lab\obj\Debug\Window Lab.csprojResolveAssemblyReference.cache
+C:\Users\Halid\Documents\Visual Studio 2013\Projects\Window Lab\Window Lab\obj\Debug\Styles\MyWindow\WindowStyle.baml
