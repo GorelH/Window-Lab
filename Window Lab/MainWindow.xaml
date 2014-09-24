@@ -7,7 +7,7 @@
     Width="979.942"
     Height="577.911"
     Icon="Icons/mainicon.png"
-    Style="{StaticResource VS2012WindowStyle}" 
+    Style="{StaticResource WindowStyle}" 
     >
 
     <Grid>

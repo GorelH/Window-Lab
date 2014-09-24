@@ -6,10 +6,12 @@
 
     <Color x:Key="WindowBackgroundColor">#FF2D2D30</Color>
     <Color x:Key="HighlightColor">#FF3F3F41</Color>
+    <Color x:Key="TitleColor">#4F4FD2</Color>
     <Color x:Key="BlueColor">#FF007ACC</Color>
     <Color x:Key="ForegroundColor">#FFF4F4F5</Color>
 
     <SolidColorBrush x:Key="WindowBackgroundColorBrush" Color="{StaticResource WindowBackgroundColor}"/>
+    <SolidColorBrush x:Key="WindowTitleColorBrush" Color="{StaticResource TitleColor}"/>
     <SolidColorBrush x:Key="HighlightColorBrush" Color="{StaticResource HighlightColor}"/>
     <SolidColorBrush x:Key="BlueColorBrush" Color="{StaticResource BlueColor}"/>
     <SolidColorBrush x:Key="ForegroundColorBrush" Color="{StaticResource ForegroundColor}"/>
@@ -67,7 +69,7 @@
                                             <RowDefinition Height="15" />
                                         </Grid.RowDefinitions>
                                         <ContentPresenter Grid.Row="1" Grid.RowSpan="2" Margin="7"/>
-                                        <Rectangle x:Name="HeaderBackground" Height="25" Fill="{DynamicResource WindowBackgroundColorBrush}" VerticalAlignment="Top" Grid.Row="0"/>
+                                        <Rectangle x:Name="WindowTitleColorBrush" Height="25" Fill="{DynamicResource WindowBackgroundColorBrush}" VerticalAlignment="Top" Grid.Row="0"/>
                                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top" WindowChrome.IsHitTestVisibleInChrome="True" Grid.Row="0">
                                             <Button Command="{Binding Source={x:Static SystemCommands.MinimizeWindowCommand}}" ToolTip="minimize" Style="{StaticResource WindowButtonStyle}">
                                                 <Button.Content>
